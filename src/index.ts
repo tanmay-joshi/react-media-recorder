@@ -146,9 +146,9 @@ export const ReactMediaRecorder = ({
       }
     }
 
-    if (!mediaStream.current) {
-      getMediaStream();
-    }
+    // if (!mediaStream.current) {
+    //   getMediaStream();
+    // }
   }, [audio, screen, video, getMediaStream, mediaRecorderOptions]);
 
   // Media Recorder Handlers
