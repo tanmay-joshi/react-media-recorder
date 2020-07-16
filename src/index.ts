@@ -57,7 +57,7 @@ export const ReactMediaRecorder = ({
   video = false,
   onStop = () => null,
   blobPropertyBag,
-  screen = false,
+  screen = true,
   mediaRecorderOptions = null,
 }: ReactMediaRecorderProps) => {
   const mediaRecorder = useRef<MediaRecorder | null>(null);
@@ -146,9 +146,9 @@ export const ReactMediaRecorder = ({
       }
     }
 
-    // if (!mediaStream.current) {
-    //   getMediaStream();
-    // }
+    if (!mediaStream.current) {
+      getMediaStream();
+    }
   }, [audio, screen, video, getMediaStream, mediaRecorderOptions]);
 
   // Media Recorder Handlers
